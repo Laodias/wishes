@@ -7,93 +7,194 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(120deg, #fad0c4, #ff9a9e);
-            text-align: center;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(120deg, #d79da4, #ee9ca7);
             color: #333;
+            text-align: center;
+        }
+        .cherry-blossoms {
+            position: fixed; /* Keep the animation fixed while allowing the page to scroll */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Keeps it behind all other content */
         }
         header {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            margin-top: 20px;
             color: #fff;
-            text-shadow: 2px 2px #333;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
         }
+        
         .birthday-wish {
             margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #333;
-            width: 80%;
-            max-width: 600px;
+            color: #444;
+            width: 85%;
+            max-width: 700px;
         }
-        .birthday-wish {
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #333;
-            width: 80%;
-            max-width: 600px;
+        .birthday-wish strong {
+            color: #ff6b6b;
         }
         .gif-container {
             margin: 20px auto;
         }
         .gif-container img {
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }  
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
         footer {
             margin-top: 30px;
-            padding: 10px;
+            padding: 15px;
             font-size: 1rem;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.7);
             color: #555;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
         footer a {
             text-decoration: none;
-            color: #ff7675;
+            color: #ee5253;
             font-weight: bold;
+        }
+        .heart-animation {
+            color: #ff6b6b;
+            font-size: 1.5rem;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
-    <header>Your Special Birthday Wish</header>
+    <canvas class="cherry-blossoms"></canvas>
 
-      <!-- GIF Section -->
-      <div class="gif-container">
+    <header>Happy Birthday, My Love! 💖</header>
+
+    <!-- GIF Section -->
+    <div class="gif-container">
         <img src="chamber-valorant.gif" alt="Love GIF">
+    </div>
+
     <!-- Background Music -->
     <audio autoplay loop>
-        <source src="Happy-Birthday.mp3" type="audio/mp3">
+        <source src="romantic.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
-    </div>
     <div class="birthday-wish">
         <p>🌟 <strong>Happy 24th Birthday, My Love!</strong> 🌟</p>
         <p>Today, we celebrate not just another year of your life, but the amazing person you are and all the happiness you bring to those around you—especially to me. 💖</p>
-        <p>Even though were miles apart today, my heart is right there with you, celebrating your special day. 💖</p>
-        <p>I wish more than anything that I could be by your side, hold your hand, and see your beautiful smile as you blow out the candles.</p>
+        <p>Even though we’re miles apart today, my heart is right there with you, celebrating your special day. 💕</p>
+        <p>I wish more than anything that I could be by your side, hold your hand, and see your beautiful smile as you blow out the candles. 🕯️</p>
         <p>But distance could never lessen the love I have for you—it only makes me cherish you even more.</p>
-        <p>Youre 24 today, and with every year, you grow even more beautiful, kind, and extraordinary. Im endlessly grateful to walk this journey of life with you by my side. You make my world brighter, my heart fuller, and my days better just by being you.</p>
+        <p>You’re 24 today, and with every year, you grow even more beautiful, kind, and extraordinary. I’m endlessly grateful to walk this journey of life with you by my side. You make my world brighter, my heart fuller, and my days better just by being you.</p>
         <p>I hope this year is filled with laughter, adventure, and all the dreams you hold close to your heart. You deserve every ounce of joy, love, and success that life has to offer.</p>
-        <p>Heres to celebrating you today and always—because youre my everything, and I love you more than words can say. Cheers to you and all the wonderful things ahead. 🥂</p>
-        <p>Until the day I can celebrate your birthday in person, know that Im sending you all my love, hugs, and kisses across the miles.</p>
-        <p> Youre always in my heart, no matter the distance.</p>
+        <p>Here’s to celebrating you today and always—because you’re my everything, and I love you more than words can say. Cheers to you and all the wonderful things ahead. 🥂</p>
+        <p>Until the day I can celebrate your birthday in person, know that I’m sending you all my love, hugs, and kisses across the miles. 💌</p>
+        <p class="heart-animation">❤️ You’re always in my heart, no matter the distance. ❤️</p>
         <p>🎂 Happy Birthday, Sayang! 🎉</p>
         <p>Forever Yours, <br>Odi 💕</p>
     </div>
+
     <footer>
         Made with ❤️ by <a href="#">Odi</a>
     </footer>
+
+    <script>
+        const canvas = document.querySelector('.cherry-blossoms');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        const blossoms = [];
+        const groundBlossoms = [];
+
+        function createBlossoms(count) {
+            for (let i = 0; i < count; i++) {
+                blossoms.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height - height,
+                    size: Math.random() * 5 + 3,
+                    speed: Math.random() * 2 + 1,
+                    drift: Math.random() * 2 - 1,
+                });
+            }
+        }
+
+        function drawBlossoms() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Falling blossoms
+    blossoms.forEach((blossom, index) => {
+        ctx.beginPath();
+        ctx.arc(blossom.x, blossom.y, blossom.size, 0, Math.PI * 2);
+        
+        // Blossom color and outline for better visibility
+        ctx.fillStyle = 'rgba(255, 182, 193, 0.9)'; // Brighter pink
+        ctx.strokeStyle = 'rgba(255, 105, 180, 0.8)'; // Darker pink outline
+        ctx.lineWidth = 1;
+        
+        ctx.fill();
+        ctx.stroke();
+
+        // Update position
+        blossom.y += blossom.speed;
+        blossom.x += blossom.drift;
+
+        // Check if blossom hits the ground
+        if (blossom.y > height - 5) {
+            groundBlossoms.push({ x: blossom.x, y: height - 5, size: blossom.size });
+            blossoms.splice(index, 1); // Remove blossom from falling
+        }
+
+        // Respawn blossom if it goes off-screen
+        if (blossom.x > width || blossom.x < 0) {
+            blossom.x = Math.random() * width;
+            blossom.y = -10;
+        }
+    });
+
+    // Draw accumulated blossoms
+    groundBlossoms.forEach(blossom => {
+        ctx.beginPath();
+        ctx.arc(blossom.x, blossom.y, blossom.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 182, 193, 0.9)';
+        ctx.fill();
+    });
+
+    // Add new blossoms
+    if (blossoms.length < 100) {
+        createBlossoms(1);
+    }
+
+    requestAnimationFrame(drawBlossoms);
+}
+
+        // Resize canvas
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        createBlossoms(50);
+        drawBlossoms();
+    </script>
 </body>
 </html>
